@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  <script type="text/javascript">
+$(document).ready(function() {
+	$(".tab_content").hide();
+	$("ul.tabs li:first").addClass("current").show();
+	$(".tab_content:first").show();
+	$("ul.tabs li").click(function() {
+		$("ul.tabs li").removeClass("current");
+		$(this).addClass("current");
+		$(".tab_content").hide();
+		var activeTab = $(this).find("a").attr("href");
+		$(activeTab).fadeIn();
+		return false;
+	});
+});
+</script>
+
+</head>
+<body>
+
+
+<style media="all">
+html, body, div, h1, h2, p, ul, li {
+margin: 0;
+padding: 0;
+}
+
+body {
+font: 100%/1.3 arial, verdana, helvetica, sans-serif;
+background: #12162F;
+color: #6D6E71;
+}
+
+.wrap {
+width: 710px;
+margin: 0 auto;
+padding: 40px;
+background: #fff;
+overflow: hidden;
+}
+
+ul {
+list-style: none;
+overflow:hidden;
+margin: 0 0 1em 0;
+}
+
+.tabs li {
+float: left;
+overflow:hidden;
+}
+
+.tabs li a {
+text-decoration: none;
+font-size: 0.875em;
+color: #fff;
+background: #a5b09a;
+padding: 0 30px;
+line-height: 2em;
+display: block;
+border-left: 1px solid #7E8478;
+}
+
+.tabs li:first-child a {
+border-left: none;
+}
+
+.tabs a:focus, .tabs a:hover {
+background: #7E84f8;
+}
+
+.tabs .current a {
+background: #4f4f4f;
+}
+
+.tab_content {
+padding: 0 0 2em;
+overflow: hidden;
+}
+
+h1, h2 {margin: 0 0 0.5em 0;}
+
+h2 {font-size: 1em;}
+</style>
+
+<div class="wrap">
+	<h1>jquery prvi deo</h1>
+	<ul class="tabs">
+		<li><a href="#one">TAB 1</a></li>
+		<li><a href="#two">TAB 2</a></li>
+		<li><a href="#three">TAB 3</a></li>
+        <li><a href="#four">drugi deo zadatka</a></li>
+	</ul>
+		
+	<div class="content" id="content" role="main">
+		<div id="one" class="tab_content">
+			<h2>prvi tab</h2>
+		</div>
+		<div id="two" class="tab_content">
+			<h2>drugi tab</h2>
+		</div>
+		<div id="three" class="tab_content">
+			<h2>treci tab</h2>
+		</div>		
+		<div id="four" class="tab_content">
+			<a href="jq2.html">drugi deo zadatka</a>
+		</div>
+	</div>	
+</div>
+
+
+</body>
+</html>

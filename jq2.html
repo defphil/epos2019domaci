@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+$(document).ready(function(){
+  $("#menu li").hover(function(){
+    $(".dropdown-menu", this).slideDown(100);
+  }, function(){
+    $(".dropdown-menu", this).stop().slideUp(100);
+  });
+})
+</script>
+</head>
+
+
+<body>
+<style media="all">
+html {
+    width: 300px;
+}
+
+#menu a {
+text-decoration: none;
+font-size: 0.875em;
+color: #fff;
+background: #a5b09a;
+padding: 0 30px;
+line-height: 2em;
+display: block;
+border-left: 1px solid #7E8478;
+}
+
+#menu ul li{
+list-style: none;
+overflow:hidden;
+margin: 0 0 1em 0;
+}}
+
+#menu .dropdown-menu li a {
+ background: #303030;
+ font-color: #000;
+}
+
+#menu .dropdown-menu li a:hover {
+    background: #ff0068;
+}
+
+</style>
+
+<div id="menu">
+  <ul>
+    <li><a href="#">Menu</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+</script>
+
+</body>
+</html>
